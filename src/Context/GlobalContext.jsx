@@ -5,10 +5,11 @@ const GlobalContext = createContext()
 
 
 export const GlobalProvider = ({children}) => {
-    const [showSocials, setShowSocials] = useState(false);
+      const [scrolled, setScrolled] = useState(false);
+
 
   return (
-		<GlobalContext.Provider value={{showSocials }}>{children}</GlobalContext.Provider>
+		<GlobalContext.Provider value={{scrolled, setScrolled }}>{children}</GlobalContext.Provider>
 	);
 }
 
